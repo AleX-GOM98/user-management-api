@@ -33,3 +33,4 @@ docker-compose.override.yml
 
 # Arquivos do Azure Pipelines
 .azure-pipelines.yml
+infra/terraform/.terraform/

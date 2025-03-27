@@ -1,0 +1,44 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{C6468551-8F74-4EDB-9FFB-8CAE15FE218A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Api", "src\Api\Api.csproj", "{CFE93E73-87C0-4A7D-AA1B-1F6E7F58E4A7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{408AF806-F190-4967-8064-A6F6AA0E29F9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Api.Tests", "tests\Api.Tests\Api.Tests.csproj", "{8EBE7B31-F2A7-425F-8AB0-DB1B5732B07A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Itens de Solução", "Itens de Solução", "{3C048C31-6263-4C98-8E01-D947C686194A}"
+	ProjectSection(SolutionItems) = preProject
+		infra\terraform\main.tf = infra\terraform\main.tf
+		outputs.tf = outputs.tf
+		variables.tf = variables.tf
+		infra\terraform\provider.tf = infra\terraform\provider.tf
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CFE93E73-87C0-4A7D-AA1B-1F6E7F58E4A7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CFE93E73-87C0-4A7D-AA1B-1F6E7F58E4A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CFE93E73-87C0-4A7D-AA1B-1F6E7F58E4A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CFE93E73-87C0-4A7D-AA1B-1F6E7F58E4A7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8EBE7B31-F2A7-425F-8AB0-DB1B5732B07A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8EBE7B31-F2A7-425F-8AB0-DB1B5732B07A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8EBE7B31-F2A7-425F-8AB0-DB1B5732B07A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8EBE7B31-F2A7-425F-8AB0-DB1B5732B07A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{CFE93E73-87C0-4A7D-AA1B-1F6E7F58E4A7} = {C6468551-8F74-4EDB-9FFB-8CAE15FE218A}
+		{8EBE7B31-F2A7-425F-8AB0-DB1B5732B07A} = {408AF806-F190-4967-8064-A6F6AA0E29F9}
+	EndGlobalSection
+EndGlobal

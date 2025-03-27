@@ -1,0 +1,35 @@
+# Ignore os arquivos da IDE do Visual Studio
+.vs/
+.idea/
+.vscode/
+
+# Diretórios e arquivos de build
+bin/
+obj/
+
+# Arquivos de configuração do usuário
+*.user
+*.userosscache
+*.suo
+*.userprefs
+
+# Arquivos de configuração específicos de dependências ou IDE
+*.sln.docstates
+
+# Diretórios e arquivos do NUGET
+.nuget/
+
+# Diretórios temporários
+*.tmp
+*.temp
+*.log
+
+# Arquivos de configuração de sistema
+Thumbs.db
+Desktop.ini
+
+# Arquivos de configuração do Docker
+docker-compose.override.yml
+
+# Arquivos do Azure Pipelines
+.azure-pipelines.yml

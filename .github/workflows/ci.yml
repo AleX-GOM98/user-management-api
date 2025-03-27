@@ -1,0 +1,38 @@
+name: CI Pipeline
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v2
+
+      - name: Set up .NET
+        uses: actions/setup-dotnet@v1
+        with:
+          dotnet-version: '6.0'
+
+      - name: Restore dependencies
+        run: dotnet restore
+
+      - name: Build
+        run: dotnet build --configuration Release
+
+      - name: Run tests
+        run: dotnet test
+
+      - name: Publish
+        run: dotnet publish --configuration Release --output ./publish
+
+      # Se quiser fazer o deploy, use uma ação para isso, por exemplo:
+      # - name: Deploy to AWS Lambda / Elastic Beanstalk / EC2
+      #   run: deploy-scripts/deploy.sh

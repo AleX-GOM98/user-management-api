@@ -8,7 +8,7 @@ namespace UserManagementApi.Repositories
     {
         private readonly AmazonDynamoDBClient _dynamoDbClient;
         private readonly DynamoDBContext _context;
-        private const string TableName = "Users"; // Nome da tabela no DynamoDB
+        private const string TableName = "users-table"; // Alterado para o nome correto da tabela
 
         public UserRepository()
         {

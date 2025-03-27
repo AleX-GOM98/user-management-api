@@ -1,4 +1,4 @@
-namespace UserManagementApi // Defina o namespace aqui
+namespace UserManagementApi 
 {
     using Microsoft.AspNetCore.Builder;
     using Microsoft.Extensions.DependencyInjection;
@@ -23,6 +23,17 @@ namespace UserManagementApi // Defina o namespace aqui
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
 
+            // Adiciona CORS
+            builder.Services.AddCors(options =>
+            {
+                options.AddDefaultPolicy(builder =>
+                {
+                    builder.AllowAnyOrigin()   // Permite qualquer origem
+                           .AllowAnyMethod()   // Permite qualquer método HTTP
+                           .AllowAnyHeader();  // Permite qualquer cabeçalho
+                });
+            });
+
             var app = builder.Build();
 
             // Configuração de middleware (como Swagger)
@@ -33,6 +44,9 @@ namespace UserManagementApi // Defina o namespace aqui
             }
 
             app.UseHttpsRedirection();
+
+            // Ativa o CORS para a aplicação
+            app.UseCors();
 
             // Configura os endpoints de controllers
             app.MapControllers();
